@@ -151,3 +151,59 @@ function my_keydown(e){
     }
 
 }
+
+function up(){
+
+   if(y >=0){
+       
+       y = y - block_height;
+       console.log("Block image height = "+ block_height);
+       console.log("When up arrow key is pressed, X = "+ x + " ,Y= " + y);
+       canvas.remove(player_img);
+       player_update();
+     
+   }    
+   
+}
+
+function down(){
+
+    if(y <=500){
+
+       y = y + block_height;
+       console.log("Block image height = "+ block_height);
+       console.log("When down arrow key is pressed, X = "+ x +" ,Y = "+ y);
+       canvas.remove(player_img);
+       player_update();
+
+    }
+
+}
+
+function left(){
+
+    if(x >= 0){
+
+        x = x - block_width;
+        console.log("Block image width = "+ block_width);
+        console.log("When left arrow key is pressed, X = "+ x +" ,Y = "+ y);
+        canvas.remove(player_img);
+        player_update();
+
+    }
+
+}
+
+function right(){
+
+    if(x <= 850){
+
+        x = x + block_width;
+        console.log("Block image width = "+ block_width);
+        console.log("When right arrow key is pressed, X = "+ x +" ,Y = "+ y);
+        canvas.remove(player_img);
+        player_update();
+            
+    }
+
+}
